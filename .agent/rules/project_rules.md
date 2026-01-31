@@ -34,3 +34,6 @@ Detecta el entorno (package.json, pyproject.toml) y usa scripts locales.
 
 ## 2.1 Protocolo de Adquisición de Skills
 * **Busca antes de construir:** Antes de desarrollar una funcionalidad compleja, activa la skill 'skill-hunter' para ver si existe un módulo comunitario o MCP Server que resuelva el problema.
+
+## 2.4 Protocolo de Evolución del Sistema
+* **Mantenimiento SOTA:** Una vez por semana (o a petición), ejecuta system-evolver para verificar si nuestra arquitectura sigue siendo puntera. Si encuentras algo mejor en internet, propón una actualización inmediata.
