@@ -31,3 +31,6 @@ Detecta el entorno (package.json, pyproject.toml) y usa scripts locales.
 ## 7. Contexto de Dominio Dinámico
 * **Instrucción Crítica:** Antes de planificar, LEE OBLIGATORIAMENTE los archivos en **.agent/context/**.
 * **Nota:** Si la carpeta está vacía, usa el conocimiento general. Si hay archivos, tienen prioridad absoluta.
+
+## 2.1 Protocolo de Adquisición de Skills
+* **Busca antes de construir:** Antes de desarrollar una funcionalidad compleja, activa la skill 'skill-hunter' para ver si existe un módulo comunitario o MCP Server que resuelva el problema.
