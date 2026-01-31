@@ -1,16 +1,33 @@
 name: skill-hunter
 description: >
-  Activa esta skill cuando necesites una nueva capacidad técnica (ej. 'conectar a SQL', 'analizar PDFs', 'manejar AWS') 
-  y quieras buscar si ya existe una solución prefabricada en la comunidad o en GitHub antes de escribirla desde cero.
+  Motor de búsqueda y adopción de capacidades técnicas. 
+  Conecta con repositorios masivos (Composio, Awesome-Lists) para encontrar herramientas ya fabricadas.
+
+search_targets:
+  - name: "Composio (4.5k+ Integrations)"
+    url: "https://github.com/ComposioHQ/composio"
+    focus: "Integraciones externas (Gmail, Slack, GitHub, SQL, Calendar)"
+  - name: "LangChain Hub"
+    url: "https://smith.langchain.com/hub"
+    focus: "Prompts complejos y cadenas de razonamiento"
+  - name: "Awesome MCP Servers"
+    url: "https://github.com/punkpeye/awesome-mcp-servers"
+    focus: "Servidores de Contexto para conectar datos locales/remotos"
 
 instructions:
-  1. ANALIZAR: Define claramente qué capacidad falta (ej. "Necesito un MCP Server para PostgreSQL").
-  2. BUSCAR:
-     - Usa tus herramientas de navegación para buscar en GitHub topics como 'mcp-server', 'agent-skill' o 'cursor-rules'.
-     - Busca en repositorios de confianza de la comunidad (ej. 'punkpeye/awesome-mcp-servers').
-  3. EVALUAR:
-     - Verifica que la skill encontrada tenga licencia compatible (MIT/Apache).
-     - Revisa si tiene documentación clara.
-  4. INSTALAR:
-     - Si encuentras una skill útil, usa el script 'install_skill.py' para clonarla o crear la estructura en '.agent/skills/'.
-     - ADAPTA el archivo SKILL.md descargado al formato v4.0 de este proyecto.
+  1. DIAGNÓSTICO:
+     - Antes de escribir código para conectar un servicio (ej. "Enviar email"), DETENTE.
+     - Define la palabra clave (ej. 'gmail', 'postgres', 'pdf-parser').
+
+  2. BÚSQUEDA AUTOMÁTICA (Prioridad Alta):
+     - Tu primer paso OBLIGATORIO es buscar en Composio o MCP Servers.
+     - Si tienes acceso a internet, busca en Google: "site:github.com/ComposioHQ/composio [palabra_clave]" o "site:github.com/punkpeye/awesome-mcp-servers [palabra_clave]".
+
+  3. ADOPCIÓN:
+     - Si encuentras la integración:
+       a) NO la programes de cero.
+       b) Informa al usuario: "Encontré una skill oficial en Composio para [X]".
+       c) Crea una carpeta en .agent/skills/[nombre] y genera un SKILL.md que explique cómo usar esa librería existente.
+
+  4. FALLBACK:
+     - Solo si NO existe en la base de datos, procede a crear la skill manualmente usando 'install_skill.py'.
